@@ -24,7 +24,7 @@ router.post('/login', async (req, res) => {
         const result = await client.query('SELECT * FROM users WHERE login = $1 OR email = $1', [loginLowerCase]);
 
         if (result.rows.length === 0) {
-            client.release(); // Libera o cliente da pool de conexão
+            client.release(); 
             return res.status(404).json({ error: 'Usuário não encontrado.' });
         }
 

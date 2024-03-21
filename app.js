@@ -18,7 +18,9 @@ app.use(express.json());
 
 
 // Pages Auth Routes
-
+app.get("/", (req,res) => {
+    res.send("Servidor funcionando para fazer requisições!")
+})
 app.use("/", login)
 app.use("/", register)
 app.use("/", recovery)
