@@ -6,7 +6,6 @@ const recovery = require("./routes/auth/Recovery/recovery.js");
 const passrecovery = require("./routes/auth/PassRecovery/passrecovery.js");
 const cors = require("cors");
 const app = express();
-const port = 5000
 
 
 // Configs
@@ -30,6 +29,6 @@ app.use("/", passrecovery)
 
 
 
-app.listen(port, ()=> {
+app.listen(process.env.PORT || 5000,  ()=> {
     console.log("Servidor rodando na porta", port);
 })
