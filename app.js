@@ -31,4 +31,8 @@ app.use("/", passrecovery)
 
 app.listen(process.env.PORT || 5000,  ()=> {
     console.log("Servidor rodando na porta", process.env.PORT);
+<<<<<<< HEAD
 })
+=======
+})
+>>>>>>> bcdf538f064d2c335f6fd29bdac695959b47dd88
