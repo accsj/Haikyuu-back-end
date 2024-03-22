@@ -24,7 +24,7 @@ router.post('/recovery', async (req, res)=> {
     
             await client.query("UPDATE users SET token = $1, expiration_time = $2 WHERE email = $3", [token, expirationTime, emailLowerCase]);
 
-            const resetPasswordLink = `http://localhost:3000/password-recovery/${token}`;
+            const resetPasswordLink = `https://haikyuu.vercel.app/password-recovery/${token}`;
     
             const mailOptions = {
                 from: process.env.user,
